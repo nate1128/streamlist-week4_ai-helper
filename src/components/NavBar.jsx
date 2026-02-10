@@ -13,19 +13,32 @@ export default function NavBar() {
           <span className="brand-tagline">An EZTechMovie Experience</span>
         </div>
 
-        {/* Row 2: Links (left-aligned) */}
+        {/* Row 2: Links (right-aligned in your markup) */}
         <div className="links-row-right">
-          <nav className="nav-links">
-            <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
+          <nav className="nav-links" aria-label="Primary">
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               Home
             </NavLink>
-            <NavLink to="/movies" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/movies"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               Movies
             </NavLink>
-            <NavLink to="/cart" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/cart"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               Cart
             </NavLink>
-            <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               About
             </NavLink>
           </nav>
@@ -34,4 +47,5 @@ export default function NavBar() {
     </header>
   );
 }
+
 
