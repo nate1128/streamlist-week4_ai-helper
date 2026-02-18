@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# StreamList (Create React App)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React app that lets you search movies via **TMDB**, view posters, title, year, and rating, and save items to your personal **StreamList**. The app remembers your last search and recent items using `localStorage`. Navigation includes a left‑aligned NavBar with logo and tagline, and a gold‑ticket dropdown for quick access to recent titles.
 
-## Available Scripts
+> **Tech:** React (CRA), Fetch/axios (whichever used in `src/api/tmdb.js`), LocalStorage
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **/movies page** powered by TMDB  
+  - Search bar with debounced queries (if implemented)  
+  - Results show **poster, title, year, rating**  
+- **LocalStorage persistence**  
+  - Last query and last results restored on refresh  
+  - Recent items shown in a gold‑ticket dropdown on the Home page  
+- **StreamList Home page**  
+  - Gold ticket opens a **recent items** dropdown (last 5 distinct items)  
+- **Navigation**  
+  - Left‑aligned **NavBar** with PNG logo and tagline  
+- **Movie actions**  
+  - **Play** (placeholder or opens trailer/stream link)  
+  - **Add to StreamList** (persists)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🖼️ Screenshots (Optional but recommended)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create a `docs/` folder (or `public/screenshots/`) and add screenshots:
 
-### `npm run build`
+1. Home page with **gold ticket** dropdown open  
+2. **/movies** search with results  
+3. StreamList with saved items
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then reference them here:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```markdown
+![Home with gold ticket](docs/home-gold-ticket.png)
+![Movies search results](docs/movies-results.png)
+![StreamList saved items](docs/streamlist.png)
